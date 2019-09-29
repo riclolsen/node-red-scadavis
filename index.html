@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+<title>uibuilder jQuery example</title>
+<meta name="description" content="Node-RED uibuilder - Example using jQuery">
+
+<link rel="icon" href="./images/node-blue.ico">
+
+<!-- OPTIONAL: Normalize is used to make things the same across browsers. Index is for your styles -->
+<link rel="stylesheet" href="../uibuilder/vendor/normalize.css/normalize.css">
+<link rel="stylesheet" href="./index.css" media="all">
+<script src="https://scadavis.io/synoptic/synopticapi.js"></script>
+</head>
+
+<body>
+<!-- The "app" element is where the code for dynamic updates is attached -->
+<div id="app">
+    <h1>
+    Welcome to UIbuilder for Node-RED
+    </h1>
+    <p>
+    This is an example of using uibuilder with jQuery. If you open the developer console, you will see some debug
+    output.
+    You can also see some dynamic data updating below, thanks to JQuery.
+    Additional information may be available in the
+    <a href="https://github.com/TotallyInformation/node-red-contrib-uibuilder/wiki/Example:-JQuery">WIKI</a>
+    </p>
+    <p>
+    Please see the README for the
+    <a href="https://github.com/TotallyInformation/node-red-contrib-uibuilder">node-red-contrib-uibuilder</a>
+    node for details on how to use uibuilder.
+    </p>
+    <h2>Dynamic Data (via JQuery)</h2>
+    <p>UIBuilder Front-End Version: <span id="feVersion"></span></p>
+    <p>Websocket State: <span id="socketConnectedState"></span></p>
+    <p>Messages Received: <span id="msgsReceived"></span></p>
+    <p>Control Messages Received: <span id="msgsControl"></span></p>
+    <p>Messages Sent: <span id="msgsSent"></span></p>
+    <p>Last Message Received:</p>
+    <code id="showMsg"></code>
+    <p>Last Control Message Received:</p>
+    <code id="showCtrlMsg"></code>
+    <p>Last Message Sent:</p>
+    <code id="showMsgSent"></code>
+</div>
+
+<div id="scadavis_display1"></div>
+
+<!-- These MUST be in the right order. Note no leading / -->
+<!-- REQUIRED: Socket.IO is loaded only once for all instances
+                    Without this, you don't get a websocket connection -->
+<script src="../uibuilder/vendor/socket.io/socket.io.js"></script>
+
+<script src="../uibuilder/vendor/jquery/dist/jquery.min.js"></script>
+
+<!-- REQUIRED: Sets up Socket listeners and the msg object -->
+<!-- <script src="./uibuilderfe.js"></script>   //dev version -->
+<script src="./uibuilderfe.min.js"></script> <!--	//prod version -->
+<!-- OPTIONAL: Put your custom code in here -->
+<script src="./index.js"></script>
+
+<script>
+    var substationsynoptic = new scadavis({
+    container: "scadavis_display1",
+    iframeparams: 'frameborder="0" height="500" width="1000"',
+    svgurl: "https://raw.githubusercontent.com/riclolsen/displayfiles/master/kor1.svg"
+    });
+    substationsynoptic.zoomTo(0.5);
+
+    substationsynoptic.on("click", function (event, tag) {
+    var v = substationsynoptic.getValue(tag);
+
+    if (event.currentTarget.id === "TAPUP")
+        substationsynoptic.setValue(tag, v + 1, false, false);
+    else
+        if (event.currentTarget.id === "TAPDOWN")
+        substationsynoptic.setValue(tag, v - 1, false, false);
+
+    if (event.currentTarget.id === "XCBROPEN")
+        substationsynoptic.setValue(tag, false, false, false);
+    else
+        if (event.currentTarget.id === "XCBRCLOSE")
+        substationsynoptic.setValue(tag, true, false, false);
+
+    if (v === true)
+        substationsynoptic.setValue(tag, false, false, false);
+    else
+        if (v === false)
+        substationsynoptic.setValue(tag, true, false, false);
+    });
+
+    uibuilder.onChange('msg', function (newVal) {
+
+    for (i = 0; i < newVal.payload.length; i++)
+        substationsynoptic.storeValue(newVal.payload[i].tag, newVal.payload[i].value);
+    substationsynoptic.updateValues();
+
+    })
+
+</script>
+</body>
+</html>
