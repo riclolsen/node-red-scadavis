@@ -1,0 +1,167 @@
+
+    [{  "tag": "KOR1TR1--YTAP",
+        "value": 9
+    },{ "tag": "KOR1XSWI1",
+        "value": false
+    },{ "tag": "KOR1XSWI2",
+        "value": true
+    },{ "tag": "KOR1XSWI4",
+        "value": true
+    },{ "tag": "KOR1XSWI6",
+        "value": true
+    },{ "tag": "KOR1XSWI8",
+        "value": true
+    },{ "tag": "KOR1XSWI10",
+        "value": false
+    },{ "tag": "KOR1XSWI12",
+        "value": true
+    },{ "tag": "KOR1XSWI14",
+        "value": true
+    },{ "tag": "KOR1XSWI16",
+        "value": false
+    },{ "tag": "KOR1XSWI18",
+        "value": true
+    },{ "tag": "KOR1XSWI20",
+        "value": true
+    },{ "tag": "KOR1XSWI22",
+        "value": false
+    },{ "tag": "KOR1XSWI48",
+        "value": true
+    },{ "tag": "KOR1XSWI50",
+        "value": true
+    },{ "tag": "KOR1XSWI46",
+        "value": false
+    },{ "tag": "KOR1XSWI24",
+        "value": false
+    },{ "tag": "KOR1XSWI26",
+        "value": true
+    },{ "tag": "KOR1XSWI28",
+        "value": false
+    },{ "tag": "KOR1XSWI30",
+        "value": true
+    },{ "tag": "KOR1XSWI32",
+        "value": true
+    },{ "tag": "KOR1XSWI34",
+        "value": true
+    },{ "tag": "KOR1XSWI36",
+        "value": true
+    },{ "tag": "KOR1XSWI38",
+        "value": false
+    },{ "tag": "KOR1XSWI40",
+        "value": true
+    },{ "tag": "KOR1XSWI42",
+        "value": true
+    },{ "tag": "KOR1XSWI44",
+        "value": false
+    },{ "tag": "KOR1TR1-2XCBR5201",
+        "value": true
+    },{ "tag": "KOR1XCBR2",
+        "value": true
+    },{ "tag": "KOR1XCBR3",
+        "value": true
+    },{ "tag": "KOR1XCBR4",
+        "value": true
+    },{ "tag": "KOR1XCBR8",
+        "value": true
+    },{ "tag": "KOR1XCBR5",
+        "value": true
+    },{ "tag": "KOR1XCBR2401",
+        "value": false
+    },{ "tag": "KOR1XCBR6",
+        "value": true
+    },{ "tag": "KOR1AL11TC",
+        "value": false
+    },{ "tag": "KOR1AL11RREC",
+        "value": true
+    },{ "tag": "KOR1AL11TC",
+        "value": true
+    },{ "tag": "KOR1AL11PSTI",
+        "value": true
+    },{ "tag": "KOR1AL12TC",
+        "value": false
+    },{ "tag": "KOR1AL12RREC",
+        "value": true
+    },{ "tag": "KOR1AL12TC",
+        "value": true
+    },{ "tag": "KOR1AL12PSTI",
+        "value": true
+    },{ "tag": "KOR1AL13TC",
+        "value": false
+    },{ "tag": "KOR1AL13RREC",
+        "value": true
+    },{ "tag": "KOR1AL13TC",
+        "value": true
+    },{ "tag": "KOR1AL13PSTI",
+        "value": true
+    },{ "tag": "KOR1AL14TC",
+        "value": false
+    },{ "tag": "KOR1AL14RREC",
+        "value": true
+    },{ "tag": "KOR1AL14TC",
+        "value": true
+    },{ "tag": "KOR1AL14PSTI",
+        "value": true
+    },{ "tag": "KOR1AL15TC",
+        "value": false
+    },{ "tag": "KOR1AL15RREC",
+        "value": true
+    },{ "tag": "KOR1AL15TC",
+        "value": true
+    },{ "tag": "KOR1AL15PSTI",
+        "value": true
+    },{ "tag": "KOR1AL16TC",
+        "value": false
+    },{ "tag": "KOR1AL16RREC",
+        "value": true
+    },{ "tag": "KOR1AL16PSTI",
+        "value": true
+    },{ "tag": "KOR1AL17TC",
+        "value": true
+    },{ "tag": "KOR1AL17PSTI",
+        "value": true
+    },{ "tag": "KOR1AL17RREC",
+        "value": true
+    },{ "tag": "KOR1ALTFTC",
+        "value": true
+    },{ "tag": "KOR1ALTFPSTI",
+        "value": true
+    },{ "tag": "KOR1ALTFRREC",
+        "value": true
+    },{ "tag": "KOR1AL11MW",
+        "value": 5
+    },{ "tag": "KOR1AL12MW",
+        "value": 7
+    },{ "tag": "KOR1AL13MW",
+        "value": 8
+    },{ "tag": "KOR1AL14MW",
+        "value": 4
+    },{ "tag": "KOR1AL15MW",
+        "value": 5
+    },{ "tag": "KOR1AL16MW",
+        "value": 12
+    },{ "tag": "KOR1AL17MW",
+        "value": 10
+    },{ "tag": "KOR1AL11MVAR",
+        "value": 0.3
+    },{ "tag": "KOR1AL12MVAR",
+        "value": 0.4
+    },{ "tag": "KOR1AL13MVAR",
+        "value": 0.5
+    },{ "tag": "KOR1AL14MVAR",
+        "value": 0.2
+    },{ "tag": "KOR1AL15MVAR",
+        "value": 0.1
+    },{ "tag": "KOR1AL16MVAR",
+        "value": 0.2
+    },{ "tag": "KOR1AL17MVAR",
+        "value": 0.3
+    },{ "tag": "KOR1TR1MW",
+        "value": 50
+    },{ "tag": "KOR1TR1MVAR",
+        "value": 1.5
+    },{ "tag": "KOR1KV230",
+        "value": 231
+    },{ "tag": "KOR1KV23",
+        "value": 23.6
+    }]                  
+  
